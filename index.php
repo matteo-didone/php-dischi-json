@@ -52,16 +52,16 @@ On clicking an album, retrieve and display the data of the selected album.
             <div class="row">
                 <div class="col-12">
                     <div class="album-container">
-                        <div class="album-row">
+
+                        <div class="album-row" v-for="(item, index) in items" :key="index">
                             <div class="album-container">
                                 <div class="picture-container">
-                                    <img src="" alt="">
+                                    <img :src="item.poster" :alt="item.title">
                                 </div>
-
                                 <div class="text-container">
-                                    <h3 class="album-title"></h3>
-                                    <p class="artist-title"></p>
-                                    <h3 class="release-year"></h3>
+                                    <h3 class="album-title">{{ item.title }}</h3>
+                                    <p class="artist-title">{{ item.author }}</p>
+                                    <h3 class="release-year">{{ item.year }}</h3>
                                 </div>
                             </div>
                         </div>
