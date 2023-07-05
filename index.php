@@ -24,6 +24,8 @@ On clicking an album, retrieve and display the data of the selected album.
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- VUE -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!-- AXIOS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
         <title>PHP Dischi JSON</title>
         <!-- Font Awesome 6.4.0 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
