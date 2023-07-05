@@ -45,7 +45,7 @@ On clicking an album, retrieve and display the data of the selected album.
             </div>
         </div>
         
-        <script src="script.js"></script>
+        <script src="./script/script.js"></script>
     </body>
 
 </html>
