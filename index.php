@@ -35,18 +35,29 @@ On clicking an album, retrieve and display the data of the selected album.
     </head>
 
     <body>
-
-        <div class="container">
-            
-            <div class="square">
-
-                <!-- Vue Code Here -->
-                <div id="app">
+        <div id="app" class="container">
+            <header>
+                <div class="row">
+                    <div class="col-12">
+                        <h1>PHP Dischi JSON</h1>
+                    </div>
                 </div>
-
-            </div>
+            </header>
+            <main>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="album-container">
+                            <div class="album" v-for="album in albums">
+                                <img :src="album.poster" :alt="album.title">
+                                <h3>{{album.title}}</h3>
+                                <h4>{{album.author}}</h4>
+                                <h5>{{album.year}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
-        
         <script src="./script/script.js"></script>
     </body>
 
