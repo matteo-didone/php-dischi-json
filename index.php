@@ -19,46 +19,54 @@ On clicking an album, retrieve and display the data of the selected album.
 
 <html lang="it">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- VUE -->
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <!-- AXIOS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
-        <title>PHP Dischi JSON</title>
-        <!-- Font Awesome 6.4.0 -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-h3sKk/x6ipBRuYXJ8V7Ku6S4T6T+fxHcIC8WSPcJvPzLPTyuFy/aXf8dn1xilJv2I2QnZGTLue5f0ZR5UE5i5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="styles/style.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- AXIOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <title>PHP Dischi JSON</title>
+    <!-- Font Awesome 6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"
+        integrity="sha512-h3sKk/x6ipBRuYXJ8V7Ku6S4T6T+fxHcIC8WSPcJvPzLPTyuFy/aXf8dn1xilJv2I2QnZGTLue5f0ZR5UE5i5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
 
-    <body>
-        <div id="app" class="container">
-            <header>
-                <div class="row">
-                    <div class="col-12">
-                        <h1>PHP Dischi JSON</h1>
+<body>
+    <div id="app" class="container">
+        <header>
+            <div class="row">
+                <div class="col-2">
+                    <div class="logo">
+                        <img src="./img/logo.png" alt="logo">
                     </div>
                 </div>
-            </header>
-            <main>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="album-container">
-                            <div class="album" v-for="album in albums">
-                                <img :src="album.poster" :alt="album.title">
-                                <h3>{{album.title}}</h3>
-                                <h4>{{album.author}}</h4>
-                                <h5>{{album.year}}</h5>
+            </div>
+        </header>
+
+        <main>
+            <div class="row">
+                <div class="col-12">
+                    <div class="album-container">
+                        <div class="album-row first-row">
+                            <div class="album-container">
                             </div>
+                        </div>
+
+                        <div class="album-row second-row">
+
                         </div>
                     </div>
                 </div>
-            </main>
-        </div>
-        <script src="./script/script.js"></script>
-    </body>
+            </div>
+        </main>
+    </div>
+
+    <script src="./script/script.js"></script>
+</body>
 
 </html>

@@ -2,8 +2,9 @@ const { createApp } = Vue;
 
 createApp({
   data() {
-    return {
-    };
 
+    return {
+      
+    };
   },
 }).mount("#app");
