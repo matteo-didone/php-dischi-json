@@ -49,26 +49,35 @@ On clicking an album, retrieve and display the data of the selected album.
         </header>
 
         <main>
-            <div class="row">
-                <div class="col-12">
-                    <div class="album-container">
+            <div class="album-row-container">
+                <div class="album-row first-row">
+                    <div class="album-container" v-for="(item, index) in items.slice(0, 3)" :key="index">
+                        <div class="picture-container">
+                            <img :src="item.poster" :alt="item.title">
+                        </div>
+                        <div class="text-container">
+                            <h3 class="album-title">{{ item.title }}</h3>
+                            <p class="artist-title">{{ item.author }}</p>
+                            <h3 class="release-year">{{ item.year }}</h3>
+                        </div>
+                    </div>
+                </div>
 
-                        <div class="album-row" v-for="(item, index) in items" :key="index">
-                            <div class="album-container">
-                                <div class="picture-container">
-                                    <img :src="item.poster" :alt="item.title">
-                                </div>
-                                <div class="text-container">
-                                    <h3 class="album-title">{{ item.title }}</h3>
-                                    <p class="artist-title">{{ item.author }}</p>
-                                    <h3 class="release-year">{{ item.year }}</h3>
-                                </div>
-                            </div>
+                <div class="album-row second-row">
+                    <div class="album-container" v-for="(item, index) in items.slice(3, 6)" :key="index">
+                        <div class="picture-container">
+                            <img :src="item.poster" :alt="item.title">
+                        </div>
+                        <div class="text-container">
+                            <h3 class="album-title">{{ item.title }}</h3>
+                            <p class="artist-title">{{ item.author }}</p>
+                            <h3 class="release-year">{{ item.year }}</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
+
     </div>
 
     <script src="./script/script.js"></script>
