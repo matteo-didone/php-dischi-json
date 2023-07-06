@@ -7,7 +7,7 @@
     // REMEMBER:
     // FROM JSON TO PHP --> json_decode
     // FROM PHP TO JSON --> json_encode
-    $toDoList = json_decode($stringRawData);
+    $discs = json_decode($stringRawData, true);
 
     header('Content-Type: application/json');
     echo $stringRawData;
